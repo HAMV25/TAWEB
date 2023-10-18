@@ -1,0 +1,111 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #007bff;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.options {
+    background-color: #f2f2f2;
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 5px;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.options h2 {
+    color: #333;
+}
+
+.options ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.options li {
+    font-size: 12px;
+    margin: 0px;
+    cursor: pointer;
+    padding: 10px 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.options li:hover {
+    background-color: #eee;
+}
+
+.faltas-container {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+#faltas-dias {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.dia-faltas {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 0px;
+    text-align: center;
+    width: 270px;
+    height: 260px;
+    margin: 10px;
+}
+
+.faltas-hora {
+    margin-top: 10px;
+}
+
+/* Agregamos este estilo para mostrar las horas */
+.horas-faltas {
+    margin: 5px 0;
+    font-size: 16px;
+}
+button{
+    position: absolute;
+    margin-left: -700px;
+    margin-top: 20px;
+    padding: 10px 20px;
+    border: 2px solid whitesmoke;
+    background-color: #007bff;
+    cursor: pointer;
+}
+.contador-faltas{
+    position: absolute;
+    margin-top: -3px
+}

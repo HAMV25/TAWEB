@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asistencia</title>
+    <link rel="stylesheet" type="text/css" href="estilohenry.css">
+</head>
+
+<body>
+    <header>
+        <a href="../login/login.html">
+            <button class="salir">Salir</button>
+        </a>
+        <p>Toma De Asistencias</p>
+        <a href="registroestudiantes.html">
+            <button class="agregar">Agregar Estudiante</button>
+        </a>
+    </header>
+    <main>
+        <div class="selecciones">
+            <select name="semanas" id="semanas">
+                <!-- Options se agregarán dinámicamente con JavaScript -->
+            </select>
+            <select name="dias" id="dias">
+                <!-- Options se agregarán dinámicamente con JavaScript -->
+            </select>
+        </div>
+        <div class="asistencia-contenedor">
+            <table class="asistencia" id="asistenciaTable">
+                <tr>
+                    <th>ESTUDIANTE</th>
+                    <th>2:00 PM</th>
+                    <th>3:00 PM</th>
+                    <th>4:00 PM</th>
+                    <th>5:00 PM</th>
+                    <th>6:00 PM</th>
+                    <th>7:00 PM</th>
+                </tr>
+                <!-- Filas de estudiantes se generarán dinámicamente con JavaScript -->
+            </table>
+        </div>
+    </main>
+    <script>
+        const semanasSelect = document.getElementById('semanas');
+const diasSelect = document.getElementById('dias');
+const agregarEstudianteButton = document.getElementById('agregarEstudiante');
+const asistenciaTable = document.getElementById('asistenciaTable');
+const numEstudiantes = 10;
+
+// Generar opciones para las semanas (del 1 al 16)
+for (let i = 1; i <= 16; i++) {
+    const option = document.createElement('option');
+    option.value = i;
+    option.textContent = `Semana ${i}`; // Corrección aquí
+    semanasSelect.appendChild(option);
+}
+
+// Generar opciones para los días de la semana
+const dias = ['Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes'];
+dias.forEach((dia, index) => {
+    const option = document.createElement('option');
+    option.value = index + 1; // Valor del 1 al 5
+    option.textContent = dia;
+    diasSelect.appendChild(option);
+});
+
+// Generar estudiantes
+for (let i = 1; i <= numEstudiantes; i++) {
+    const newRow = asistenciaTable.insertRow(-1);
+    newRow.insertCell(0).textContent = `Estudiante ${i}`; // Corrección aquí
+    for (let j = 1; j <= 6; j++) {
+        const cell = newRow.insertCell(j);
+        const checkbox = document.createElement('input');
+        checkbox.type = 'checkbox';
+        checkbox.className = 'attendance-checkbox';
+        cell.appendChild(checkbox);
+    }
+}
+
+    </script>
+</body>
+<style>
+    body {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    height: 100vh;
+    margin: 0;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    background-color: blueviolet;
+    font-size: 20px;
+    color: whitesmoke;
+}
+
+select {
+    width: 303px;
+    height: 30px;
+    margin-top: 10px;
+    border-radius: 10px;
+    border: 2px solid whitesmoke;
+    /* Agregado un valor para el borde */
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+}
+
+.selecciones {
+    text-align: center;
+    /* Centrar elementos dentro de .selecciones */
+}
+
+button {
+    padding: 10px 20px;
+    margin-top: 13px;
+    border: 3px solid whitesmoke;
+    background-color: blueviolet;
+    color: whitesmoke;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: blue;
+}
+
+.salir {
+    position: absolute;
+    margin-left: -40%;
+}
+
+.agregar {
+    position: absolute;
+    margin-left: 30%;
+}
+
+.asistencia {
+    width: 100%;
+    /* Hacer que la tabla ocupe todo el ancho */
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.asistencia th,
+.asistencia td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+}
+</style>
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Estudiantes</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <a href="profesor.html">
+        <button>
+volver
+        </button>
+    </a> 
+    <div class="container">
+        <h1>Registro de Estudiante</h1>
+        <div class="form-container">
+            <form id="asistencia-form">
+                <label for="nombre">Nombre del Estudiante:</label>
+                <input type="text" id="nombre" required>
+                <button type="submit">Añadir Estudiante</button>
+            </form>
+        </div>
+
+        <div class="asistencia-list">
+            <h2>Lista de Estudiantes agregados recientemente:</h2>
+            <ul id="lista-asistencia">
+                <!-- Aquí se mostrará la lista de asistencia -->
+            </ul>
+        </div>
+    </div>
+
+    <script src="añadirestudiantes.js"></script>
+</body>
+<style>
+    body {
+    font-family: 'Arial', sans-serif;
+    background-color: #F0F4C3;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.container {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    color: #5A8A83;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.form-container {
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+form {
+    text-align: left;
+    margin-top: 20px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    color: #5A8A83;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #5A8A83;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #3B6359;
+}
+
+.asistencia-list {
+    max-width: 400px;
+    margin: 20px auto;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+}
+
+h2 {
+    color: #5A8A83;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+</style>
+</html>
